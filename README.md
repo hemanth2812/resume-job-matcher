@@ -1,73 +1,53 @@
-# Welcome to your Lovable project
+Resume Insight — ATS-Enabled Resume Matcher
 
-## Project info
+Resume Insight is a modern web application that helps candidates and recruiters evaluate how well a resume matches a job description.  
+It computes an ATS (Applicant Tracking System) Score, highlights matched/missing skills, and provides suggestions for improving resumes to better align with job postings.  
 
-**URL**: https://lovable.dev/projects/3bbcb175-9153-4209-9d8a-ecea6b0302de
+Features
+  Upload Resume → Upload resumes in supported formats (PDF/DOCX/TXT).  
+  Job Description Input → Paste text or upload JD file.  
+  ATS Scoring → Calculates score (0–100) based on keyword match, semantic similarity, and formatting.  
+  Skill Match Highlights → Shows matched, missing, and suggested keywords.  
+  Improvement Suggestions → Recommends changes for better ATS compatibility.  
+  Modern UI → Built with React, TypeScript, TailwindCSS, and shadcn UI.  
 
-## How can I edit this code?
+ Tech Stack
+Frontend
+-  React + TypeScript  
+-  TailwindCSS + shadcn/ui components  
+-  Vite (build tool)  
 
-There are several ways of editing your application.
+Backend (optional integration)  
+This frontend can connect to a Python backend (FastAPI/Flask) for:  
+- Resume parsing (pdfminer, python-docx, Tesseract OCR)  
+- NLP-powered scoring (spaCy, sentence-transformers, BM25)  
+- PDF export for reports/resume suggestions  
 
-**Use Lovable**
+Installation & Setup
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3bbcb175-9153-4209-9d8a-ecea6b0302de) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+1️⃣ Clone the Repository
+git clone https://github.com/hemanth2812resume-job-matcher
+2️⃣ Install Dependencies
+Copy code
+npm install
+3️⃣ Run Development Server
+Copy code
 npm run dev
-```
+The app will be available at: http://localhost:5173
 
-**Edit a file directly in GitHub**
+4️⃣ Build for Production
+npm run build
+npm run preview
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+📌 Usage
+Open the app in your browser.
+Upload a resume (PDF/DOCX/TXT).
+Paste or upload a job description.
+Get an ATS Score with:
+Matched skills
+Missing skills
+Suggestions for improvement
+(Optional) Export improved resume or ATS report (if backend is connected).
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/3bbcb175-9153-4209-9d8a-ecea6b0302de) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+📄 License
+This project is licensed under the MIT License.
